@@ -1,10 +1,9 @@
 "use strict";
 
-function updateAge(selector) {
-  const birthYear = 1999;
+function updateYearText(selector, offset) {
   const currYear = new Date().getFullYear();
-  const age = currYear - birthYear;
-  document.querySelector(selector).innerText = age;
+  document.querySelector(selector).innerText = currYear - offset;
 }
 
-updateAge("#myAge");
+updateYearText("#myAge", 1999);
+updateYearText("#footerYear", 0);
